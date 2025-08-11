@@ -1,0 +1,17 @@
+#connection
+import { createClient } from '@supabase/supabase-js'
+const supabaseUrl = 'https://ykztwszvzkpdztckrmbg.supabase.co'
+const supabaseKey = process.env.SUPABASE_KEY
+const supabase = createClient(supabaseUrl, supabaseKey)
+
+#read infromation
+#english
+let { data: english, error } = await supabase
+  .from('english')
+  .select('*')
+#telugu
+
+let { data: telugu, error } = await supabase
+  .from('telugu')
+  .select('*')
+
